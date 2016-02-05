@@ -28,7 +28,7 @@ public class MovieAdapter extends ArrayAdapter<MovieData> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.movie_item,parent,false);
         }
         ImageView posterView = (ImageView)convertView.findViewById(R.id.movie_image);
-        Picasso.with(getContext()).load("http://image.tmdb.org/t/p/w185/"+md.getPosterPath()).into(posterView);
+        Picasso.with(getContext()).load("http://image.tmdb.org/t/p/w185/"+md.getPosterPath()).placeholder(R.drawable.loader).error(R.drawable.logo).into(posterView);
 
         return convertView;
     }

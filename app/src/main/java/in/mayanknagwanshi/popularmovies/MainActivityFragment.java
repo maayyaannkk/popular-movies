@@ -22,6 +22,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import in.mayanknagwanshi.popularmovies.lib.JSONParser;
 import in.mayanknagwanshi.popularmovies.lib.MovieAdapter;
 import in.mayanknagwanshi.popularmovies.lib.MovieData;
@@ -32,7 +34,7 @@ import in.mayanknagwanshi.popularmovies.lib.MovieData;
 public class MainActivityFragment extends Fragment {
     private MovieAdapter movieAdapter;
     private ArrayList<MovieData> listMovieData;
-    private GridView gridView;
+    @Bind(R.id.movie_grid) GridView gridView;
     String BASE_URL = "http://api.themoviedb.org/3/discover/movie";
     private String sort_order = "";
     public MainActivityFragment(){
@@ -108,7 +110,8 @@ public class MainActivityFragment extends Fragment {
             movieAdapter = new MovieAdapter(getActivity(),listMovieData);
         }
 
-        gridView = (GridView) rootView.findViewById(R.id.movie_grid);
+        //gridView = (GridView) rootView.findViewById(R.id.movie_grid);
+        ButterKnife.bind(this,rootView);
         if(movieAdapter!=null){
             gridView.setAdapter(movieAdapter);
             setOnItemClickOnGridView(gridView);
