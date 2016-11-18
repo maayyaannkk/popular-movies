@@ -8,9 +8,9 @@ It is a clean UI, syncs to a server, and presents information to the user.
  height="520" width="290" align="left"/>
  <img src="https://github.com/maayyaannkk/popular-movies/blob/master/Screenshot2.png" 
  height="520" width="290" />
- <img src="https://github.com/maayyaannkk/popular-movies/blob/master/Screenshot4.png" 
- height="520" width="290" align="right"/>
+
  <br/>
- 
+  <img src="https://github.com/maayyaannkk/popular-movies/blob/master/Screenshot4.png" 
+ height="520" width="290" align="left"/>
  <img src="https://github.com/maayyaannkk/popular-movies/blob/master/Screenshot3.png" 
- height="290" width="520" align="right"/>
+ height="290" width="520" />
